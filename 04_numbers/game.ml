@@ -28,3 +28,13 @@ let rec subtract m n =
   match n with
   | 0 -> m
   | _ -> subtract (m - 1) (n - 1)
+
+(* count function *)
+
+let rec acc_c n alist =
+  match alist with
+  | [] -> n
+  | x :: xs -> acc_c (n + 1) xs
+
+let count alist =
+  acc_c 0 alist
